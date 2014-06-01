@@ -8,7 +8,7 @@ angular.module('thinkfulApp')
 
 	$scope.num1 = 0;
 	$scope.num2 = 0;
-	$scope.display = 'X plus/minus/multiply/divide Y is Z';
+	$scope.display = 'X + Y is Z';
 
 	$scope.add = function () {
 		operation = ' plus ';
