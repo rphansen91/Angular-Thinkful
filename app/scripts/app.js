@@ -15,7 +15,6 @@ angular
       })
       .when('/calculator', {
         templateUrl: 'views/calculator.html',
-        controller: 'CalcCtrl',
         activeTab:'calc'
       })
       .when('/madlib', {
