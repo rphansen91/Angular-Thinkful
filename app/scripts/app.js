@@ -25,7 +25,6 @@ angular
       })
       .when('/multiplication', {
         templateUrl: 'views/multiplication.html',
-        controller: 'MultiplicationCtrl',
         activeTab:'multiply'
       })
       .otherwise({
