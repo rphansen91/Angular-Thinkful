@@ -31,7 +31,7 @@
   </div>
 </div>
 
-<div class="hero" ng-init="male=true">
-  <p><b>{{name}}</b> was a <b>{{job}}</b> who loved technology. Although <span ng-if="male">he</span><span ng-if="!male">she</span> loved parts of <span ng-if="male">his</span><span ng-if="!male">her</span> job, <span ng-if="male">he</span><span ng-if="!male">she</span> absolutely hated <b>{{task}}</b> and <b>{{dirty}}</b>. So, <b>{{name}}</b> met with <span ng-if="male">his</span><span ng-if="!male">her</span> mentor <b>{{celeb}}</b> who told <span ng-if="male">him</span><span ng-if="!male">her</span> to learn how to <b>{{skill}}</b> with Thinkful. Thinkful didn't offer a course on <b>{{skill}}</b> so <span ng-if="male">he</span><span ng-if="!male">she</span> studied programming instead.</p>
-  <p>What a great decision! With <span ng-if="male">his</span><span ng-if="!male">her</span> new skills, <b>{{name}}</b> built a(n) <b>{{adjective}}</b> robot named <b>{{obnox}}</b> that not only loved <b>{{dirty}}</b> but did it a <b>{{huge}}</b> times faster.</p>
+<div class="hero">
+  <p><b>{{name}}</b> was a <b>{{job}}</b> who loved technology. Although {{(male)?'he':'she'}} loved parts of {{(male)?'his':'her'}} job, {{(male)?'he':'she'}} absolutely hated <b>{{task}}</b> and <b>{{dirty}}</b>. So, <b>{{name}}</b> met with {{(male)?'his':'her'}} mentor <b>{{celeb}}</b> who told {{(male)?'him':'her'}} to learn how to <b>{{skill}}</b> with Thinkful. Thinkful didn't offer a course on <b>{{skill}}</b> so {{(male)?'he':'she'}} studied programming instead.</p>
+  <p>What a great decision! With {{(male)?'his':'her'}} new skills, <b>{{name}}</b> built a(n) <b>{{adjective}}</b> robot named <b>{{obnox}}</b> that not only loved <b>{{dirty}}</b> but did it a <b>{{huge}}</b> times faster.</p>
 </div>

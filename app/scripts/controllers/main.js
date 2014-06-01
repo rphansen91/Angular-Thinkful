@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('thinkfulApp')
-  .controller('MainCtrl', function ($scope, $route) {
+  .controller('MainCtrl', ['$scope', '$route', function ($scope, $route) {
     $scope.$route = $route;
-  });
+  }]);
