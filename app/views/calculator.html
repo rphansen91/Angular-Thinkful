@@ -1,0 +1,18 @@
+<div ng-controller="CalcCtrl" class="jumbotron">
+  <h1>Calculator</h1>
+  <form action="">
+    <div class="col-sm-12">
+      <label for="x">X = </label>
+      <input type="number" ng-model="num1">
+    </div>
+    <div class="col-sm-12">
+      <label for="x">Y = </label>
+      <input type="number" ng-model="num2">
+    </div>
+    <a ng-click="add()" class="btn btn-primary">+</a>
+    <a ng-click="sub()" class="btn btn-primary">-</a>
+    <a ng-click="mult()" class="btn btn-primary">x</a>
+    <a ng-click="div()" class="btn btn-primary">/</a>
+  </form>
+  <h3>{{display}}</h3>
+</div>
