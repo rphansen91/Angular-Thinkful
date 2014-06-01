@@ -11,15 +11,16 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        activeTab:'home'
       })
       .when('/calculator', {
-        templateUrl: 'view/calculator.html',
-        controller: 'CalcCtrl'
+        templateUrl: 'views/calculator.html',
+        controller: 'CalcCtrl',
+        activeTab:'calc'
       })
       .when('/madlib', {
-        templateUrl: 'view/madlib.html',
-        controller: 'MadlibCtrl'
+        templateUrl: 'views/madlib.html',
+        activeTab:'mad'
       })
       .otherwise({
         redirectTo: '/'

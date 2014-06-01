@@ -16,6 +16,7 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
     <!-- endbuild -->
   </head>
   <body ng-app="thinkfulApp">
@@ -24,12 +25,12 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div ng-controller="MainCtrl" class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#calculator">Calculator</a></li>
-          <li><a ng-href="#madlib">Madlib</a></li>
+          <li ng-class="{active: $route.current.activeTab == 'home'}"><a ng-href="#">Home</a></li>
+          <li ng-class="{active: $route.current.activeTab == 'calc'}"><a ng-href="#/calculator">Calculator</a></li>
+          <li ng-class="{active: $route.current.activeTab == 'mad'}"><a ng-href="#/madlib">Madlib</a></li>
         </ul>
         <h3 class="text-muted">Thinkful</h3>
       </div>
