@@ -7,31 +7,37 @@
       <img src="images/ng-mad-libs-logo.png" alt="" class="img-responsive">
     </div>
   </div>
-  <h3 class="text-left">Provide the following words:</h3>
-  <div class="row">
-    <form>
-      <div class="col-sm-4">
-        <input class="madlib" type="text" ng-model="name" placeholder="Male Name"/>
-        <input class="madlib" type="text" ng-model="job" placeholder="Job Title"/>
-        <input class="madlib" type="text" ng-model="task" placeholder="Tedious Task"/>
-      </div>
-      <div class="col-sm-4">
-        <input class="madlib" type="text" ng-model="dirty" placeholder="Dirty Task"/>
-        <input class="madlib" type="text" ng-model="celeb" placeholder="Celebrity"/>
-        <input class="madlib" type="text" ng-model="skill" placeholder="Useless Skill"/>
-      </div>
-      <div class="col-sm-4">
-        <input class="madlib" type="text" ng-model="obnox" placeholder="Obnoxious Celeb" />
-        <input class="madlib" type="number" ng-model="huge" placeholder="Huge Number"/>
-        <input class="madlib" type="text" ng-model="adjective" placeholder="Adjective" />
-      </div>
-      <a ng-click="male=true;" class="btn btn-primary">Male</a>
-      <a ng-click="male=false;" class="btn btn-primary">Female</a>
-    </form>
+  <div ng-hide="story">
+    <h3 class="text-left">Provide the following words:</h3>
+    <div class="row">
+      <form name="madlibForm" ng-submit="submit()">
+        <div class="col-sm-4">
+          <input class="madlib" type="text" ng-model="data.name" placeholder="Male Name" required/>
+          <input class="madlib" type="text" ng-model="data.job" placeholder="Job Title" required/>
+          <input class="madlib" type="text" ng-model="data.task" placeholder="Tedious Task"/>
+        </div>
+        <div class="col-sm-4">
+          <input class="madlib" type="text" ng-model="data.dirty" placeholder="Dirty Task" required/>
+          <input class="madlib" type="text" ng-model="data.celeb" placeholder="Celebrity" required/>
+          <input class="madlib" type="text" ng-model="data.skill" placeholder="Useless Skill" required/>
+        </div>
+        <div class="col-sm-4">
+          <input class="madlib" type="text" ng-model="data.obnox" placeholder="Obnoxious Celeb" required/>
+          <input class="madlib" type="number" ng-model="data.huge" placeholder="Huge Number" required/>
+          <input class="madlib" type="text" ng-model="data.adjective" placeholder="Adjective" required/>
+        </div>
+        <div class="col-sm-12 text-center">
+          <input type="submit" value="Generate Story" class="btn btn-primary"/>
+          <a ng-click="male=true;" class="btn btn-primary">Male</a>
+          <a ng-click="male=false;" class="btn btn-primary">Female</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div ng-show="story" class="hero">
+    <p><b>{{data.name}}</b> was a <b>{{data.job}}</b> who loved technology. Although {{(male)?'he':'she'}} loved parts of {{(male)?'his':'her'}} job, {{(male)?'he':'she'}} absolutely hated <b>{{data.task}}</b> and <b>{{data.dirty}}</b>. So, <b>{{data.name}}</b> met with {{(male)?'his':'her'}} mentor <b>{{data.celeb}}</b> who told {{(male)?'him':'her'}} to learn how to <b>{{data.skill}}</b> with Thinkful. Thinkful didn't offer a course on <b>{{data.skill}}</b> so {{(male)?'he':'she'}} studied programming instead.</p>
+    <p>What a great decision! With {{(male)?'his':'her'}} new skills, <b>{{data.name}}</b> built a(n) <b>{{data.adjective}}</b> robot named <b>{{data.obnox}}</b> that not only loved <b>{{data.dirty}}</b> but did it a <b>{{data.huge}}</b> times faster.</p>
+    <a ng-click="form()" class="btn btn-primary">Start Over</a>
   </div>
 </div>
 
-<div class="hero">
-  <p><b>{{name}}</b> was a <b>{{job}}</b> who loved technology. Although {{(male)?'he':'she'}} loved parts of {{(male)?'his':'her'}} job, {{(male)?'he':'she'}} absolutely hated <b>{{task}}</b> and <b>{{dirty}}</b>. So, <b>{{name}}</b> met with {{(male)?'his':'her'}} mentor <b>{{celeb}}</b> who told {{(male)?'him':'her'}} to learn how to <b>{{skill}}</b> with Thinkful. Thinkful didn't offer a course on <b>{{skill}}</b> so {{(male)?'he':'she'}} studied programming instead.</p>
-  <p>What a great decision! With {{(male)?'his':'her'}} new skills, <b>{{name}}</b> built a(n) <b>{{adjective}}</b> robot named <b>{{obnox}}</b> that not only loved <b>{{dirty}}</b> but did it a <b>{{huge}}</b> times faster.</p>
-</div>

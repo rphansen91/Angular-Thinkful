@@ -27,6 +27,11 @@ angular
         templateUrl: 'views/multiplication.html',
         activeTab:'multiply'
       })
+      .when('/waitstaff', {
+        templateUrl: 'views/waitstaff.html',
+        controller: 'WaitstaffCtrl',
+        activeTab:'waitstaff'
+      })
       .otherwise({
         redirectTo: '/'
       });
