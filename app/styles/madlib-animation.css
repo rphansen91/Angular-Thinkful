@@ -1,11 +1,6 @@
-.view-animation.ng-enter-stagger {
-  /* 200ms will be applied between each sucessive enter operation */ 
-  -webkit-animation-delay:0.5s;
-  animation-delay:0.5s;
-
-  /* this is here to avoid accidental CSS inheritance */
-  -webkit-animation-duration:0;
-  animation-duration:0;
+/* VIEW ANIMATION */
+.view-animation {
+  position:relative;
 }
 .view-animation.ng-enter {
   -webkit-animation: 1s slideInRight;
@@ -16,7 +11,7 @@
   animation: 0.5s slideOutLeft;
 }
 
-
+/* MADLIB ANIMATION */
 .story-animation.ng-hide-remove {
   -webkit-transition:1s linear all;
   transition:1s linear all;
@@ -29,39 +24,43 @@
   opacity:0;
 }
 
+/* WORD ANIMATION (REFACTOR) */
+.word-animation {
+  position:relative;
+}
 
-.word-animation.ng-show-stagger {
-  /* 200ms will be applied between each sucessive enter operation */ 
+/*.word-animation-add-stagger {
   -webkit-animation-delay:0.5s;
   animation-delay:0.5s;
-
-  /* this is here to avoid accidental CSS inheritance */
   -webkit-animation-duration:0;
   animation-duration:0;
+}*/
+
+.word-animation-add {
+  -webkit-animation: 2s slideInRight;
+  animation: 2s slideInRight;
 }
 
-.word-animation.ng-show {
-  -webkit-animation: 0.5s slideInRight;
-  animation: 0.5s slideInRight;
+/* KEYFRAME ANIMATIONS */
+
+@-webkit-keyframes slideInRight {
+  from {
+    left: 2000px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
 }
 
-@keyframes slideInRight {
+@-webkit-keyframes slideOutLeft {
   from {
-    right:1000px;
-    opacity:0;
+    right: 0;
+    opacity: 1;
   }
   to {
-    right:0;
-    opacity:1;
-  }
-}
-@keyframes slideOutLeft {
-  from {
-    left:0;
-    opacity:1;
-  }
-  to {
-    left:1000px;
-    opacity:0;
+    right: 1000px;
+    opacity: 0;
   }
 }
