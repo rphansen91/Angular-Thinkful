@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/multiplication.css">
+    <link rel="stylesheet" href="styles/madlib-animation.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <!-- endbuild -->
   </head>
@@ -40,7 +42,7 @@
         <h3 class="text-muted">Thinkful</h3>
       </div>
       
-      <div ng-view=""></div>
+      <div ng-view="" class="view-animation"></div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-tree-deciduous"></span>RPH</p>
@@ -76,7 +78,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
         <!-- Services -->
 
         <!-- Controllers -->

@@ -5,11 +5,11 @@
 			<h2 class="text-center">Enter The Meal Details</h2>
 			<form name="detailsForm" ng-submit="submit()">
 				<label>Base Meal Price: $ </label>
-				<input class="madlib" type="number" placeholder="9.99" ng-model="data.price" min="0" required/>
+				<input class="madlib" type="number" placeholder="9.99" ng-model="data.price" min="0" step="any" required/>
 				<label>Tax Rate: % </label>
-				<input class="madlib" type="number" ng-model="data.taxPerc" min="0" max="100" required/>
+				<input class="madlib" type="number" ng-model="data.taxPerc" min="0" max="100" step="any" required/>
 				<label>Tip Percentage: $ </label>
-				<input class="madlib" type="number" ng-model="data.tipPerc" min="0" max="100" required/>
+				<input class="madlib" type="number" ng-model="data.tipPerc" min="0" max="100" step="any" required/>
 				<div class="row">
 					<div class="col-sm-6 pad-it">
 						<input type="submit" value="Submit" class="btn btn-primary"/>

@@ -1,0 +1,67 @@
+.view-animation.ng-enter-stagger {
+  /* 200ms will be applied between each sucessive enter operation */ 
+  -webkit-animation-delay:0.5s;
+  animation-delay:0.5s;
+
+  /* this is here to avoid accidental CSS inheritance */
+  -webkit-animation-duration:0;
+  animation-duration:0;
+}
+.view-animation.ng-enter {
+  -webkit-animation: 1s slideInRight;
+  animation: 1s slideInRight;
+}
+.view-animation.ng-leave {
+  -webkit-animation: 0.5s slideOutLeft;
+  animation: 0.5s slideOutLeft;
+}
+
+
+.story-animation.ng-hide-remove {
+  -webkit-transition:1s linear all;
+  transition:1s linear all;
+
+  /* remember to add this */
+  display:block!important;
+  opacity:1;
+}
+.story-animation.ng-hide {
+  opacity:0;
+}
+
+
+.word-animation.ng-show-stagger {
+  /* 200ms will be applied between each sucessive enter operation */ 
+  -webkit-animation-delay:0.5s;
+  animation-delay:0.5s;
+
+  /* this is here to avoid accidental CSS inheritance */
+  -webkit-animation-duration:0;
+  animation-duration:0;
+}
+
+.word-animation.ng-show {
+  -webkit-animation: 0.5s slideInRight;
+  animation: 0.5s slideInRight;
+}
+
+@keyframes slideInRight {
+  from {
+    right:1000px;
+    opacity:0;
+  }
+  to {
+    right:0;
+    opacity:1;
+  }
+}
+@keyframes slideOutLeft {
+  from {
+    left:0;
+    opacity:1;
+  }
+  to {
+    left:1000px;
+    opacity:0;
+  }
+}
