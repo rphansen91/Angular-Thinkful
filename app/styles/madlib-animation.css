@@ -45,11 +45,13 @@
 
 @-webkit-keyframes slideInRight {
   from {
-    left: 2000px;
+    margin-left: 2000px;
+    margin-top: 2000px;
     opacity: 0;
   }
   to {
-    left: 0;
+    margin-left: 0;
+    margin-top:0;
     opacity: 1;
   }
 }

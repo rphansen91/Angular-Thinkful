@@ -33,6 +33,11 @@ angular
         controller: 'WaitstaffCtrl',
         activeTab:'waitstaff'
       })
+      .when('/instasearch', {
+        templateUrl: 'views/instasearch.html',
+        controller: 'InstaCtrl',
+        activeTab:'instasearch'
+      })
       .otherwise({
         redirectTo: '/'
       });

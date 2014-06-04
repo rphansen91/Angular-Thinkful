@@ -7,9 +7,9 @@
 				<label>Base Meal Price: $ </label>
 				<input class="madlib" type="number" placeholder="9.99" ng-model="data.price" min="0" step="any" required/>
 				<label>Tax Rate: % </label>
-				<input class="madlib" type="number" ng-model="data.taxPerc" min="0" max="100" step="any" required/>
-				<label>Tip Percentage: $ </label>
-				<input class="madlib" type="number" ng-model="data.tipPerc" min="0" max="100" step="any" required/>
+				<input class="madlib" type="number" placeholder="8.5" ng-model="data.taxPerc" min="0" max="100" step="any" required/>
+				<label>Tip Percentage: % </label>
+				<input class="madlib" type="number" placeholder="15" ng-model="data.tipPerc" min="0" max="100" step="any" required/>
 				<div class="row">
 					<div class="col-sm-6 pad-it">
 						<input type="submit" value="Submit" class="btn btn-primary"/>
@@ -20,20 +20,40 @@
 				</div>
 			</form>
 		</div>
-		<a ng-click="reset()" class="btn btn-danger">Reset</a>
 	</div>
 	<div class="col-sm-6">
 		<div class="jumbotron" ng-controller="ChargesCtrl">
 			<h2 class="text-center">Customer Charges</h2>
-			<h4>Subtotal {{subtotal|number:2}}</h4>
-			<h4>Tip      {{tip|number:2}}</h4>
-			<h4>Total    {{total|number:2}}</h4>
+			<div class="row">
+				<div class="col-xs-6">
+					<h4 class="text-left">Subtotal</h4>
+					<h4 class="text-left">Tip</h4>
+					<h4 class="text-left">Total</h4>
+				</div>
+				<div class="col-xs-6">
+					<h4 class="text-left">{{subtotal|number:2}}</h4>
+					<h4 class="text-left">{{tip|number:2}}</h4>
+					<h4 class="text-left">{{total|number:2}}</h4>
+				</div>
+			</div>
 		</div>
 		<div class="jumbotron" ng-controller="EarningsCtrl">
-			<h2 class="text-center">My Earnings Info</h2>
-			<h4>Tip Total:              {{tipTot|number:2}}</h4>
-			<h4>Meal Count:             {{count}}</h4>
-			<h4>Average Tip Per Meal:   {{average()|number:2}}</h4>
+			<h2 class="text-center">My Earnings</h2>
+			<div class="row">
+				<div class="col-xs-8">
+					<h4 class="text-left">Tip Total: </h4>
+					<h4 class="text-left">Meal Count: </h4>
+					<h4 class="text-left">Average Tip: </h4>
+				</div>
+				<div class="col-xs-4">
+					<h4 class="text-left">{{tipTot|number:2}}</h4>
+					<h4 class="text-left">{{count}}</h4>
+					<h4 class="text-left">{{average()|number:2}}</h4>
+				</div>
+			</div>
 		</div>
+	</div>
+	<div class="text-center">
+		<a ng-click="reset()" class="btn btn-danger margin-btm15">Reset</a>
 	</div>
 </div>
