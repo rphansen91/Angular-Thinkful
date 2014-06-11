@@ -21,7 +21,7 @@ angular.module('thinkfulApp')
 			params: request
 		}).
 		success(function(result) {
-			$scope.instas = result["data"];
+			$scope.instas = result.data;
 			console.log($scope.instas);
 			displayResults();
 		}).

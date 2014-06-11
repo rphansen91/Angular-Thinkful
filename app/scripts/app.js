@@ -33,6 +33,16 @@ angular
         controller: 'WaitstaffCtrl',
         activeTab:'waitstaff'
       })
+      .when('/waitstaff/meal', {
+        templateUrl: 'views/meal.html',
+        controller: 'WaitstaffCtrl',
+        activeTab:'waitstaff'
+      })
+      .when('/waitstaff/tips', {
+        templateUrl: 'views/tips.html',
+        controller: 'WaitstaffCtrl',
+        activeTab:'waitstaff'
+      })
       .when('/instasearch', {
         templateUrl: 'views/instasearch.html',
         controller: 'InstaCtrl',
